@@ -1,46 +1,49 @@
-"use client";
-import Link from "next/link";
-import { Button } from "../ui/button";
-import { Home, Menu, Search, Upload, UserPlus, Users, X } from "lucide-react";
-import { useState } from "react";
+'use client';
+import Link from 'next/link';
+import { Button } from '../ui/button';
+import { Home, Menu, Search, Upload, UserPlus, Users, X } from 'lucide-react';
+import { useState } from 'react';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
-    { link: "/listings", label: "Listings", icon: Search },
-    { link: "/agents", label: "Find Agent", icon: Users },
-    { link: "/properties", label: "List Property", icon: Upload },
+    { link: '/listings', label: 'How it works', icon: Search },
+    { link: '/agents', label: 'Why Us', icon: Users },
+    { link: '/properties', label: 'FAQs', icon: Upload },
   ];
 
   return (
-    <header className="sticky top-0 z-50 bg-card border-b border-border">
+    <header className="bg-card border-border sticky top-0 z-50 border-b">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-14">
+        <div className="flex h-14 items-center justify-between">
           <Link href={`/`} className="flex items-center gap-2">
-            <Home className="h-5 w-5" />
-            <span className="font-semibold text-sm">Rental</span>
+            <span className="text-sm font-semibold">Domorang</span>
           </Link>
 
           {/* Desktop nav */}
-          <nav className="hidden md:flex items-center gap-6">
+          <nav className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-6 md:flex">
             {navItems.map((item) => (
               <Link
                 key={item.link}
                 href={item.link}
-                className="text-sm font-semibold text-foreground hover:text-foreground/80 transition-colors"
+                className="text-foreground hover:text-foreground/80 text-sm font-semibold transition-colors"
               >
                 {item.label}
               </Link>
             ))}
-            <Link href={`/register`}>
-              <Button size="sm">Register</Button>
-            </Link>
           </nav>
-
+          <Link href={`/register`}>
+            <Button
+              size="sm"
+              className="bg-primary hover:bg-secondary/90 text-secondary-foreground rounded-full px-6"
+            >
+              Get Early Access
+            </Button>
+          </Link>
           {/* Mobile menu toggle */}
           <button
-            className="md:hidden p-2"
+            className="p-2 md:hidden"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -54,7 +57,7 @@ const Navbar = () => {
 
         {/* Mobile nav */}
         {isMenuOpen && (
-          <nav className="md:hidden py-4 border-t border-border">
+          <nav className="border-border border-t py-4 md:hidden">
             <div className="flex flex-col gap-3">
               {navItems.map((item) => {
                 const Icon = item.icon;
@@ -62,7 +65,7 @@ const Navbar = () => {
                   <Link
                     key={item.link}
                     href={item.link}
-                    className="flex items-center gap-3 px-2 py-2 text-sm font-semibold hover:bg-muted rounded-md"
+                    className="hover:bg-muted flex items-center gap-3 rounded-md px-2 py-2 text-sm font-semibold"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {Icon && <Icon className="h-4 w-4" />}
@@ -74,7 +77,7 @@ const Navbar = () => {
               {/* Register button */}
               <Link
                 href="/register"
-                className="flex items-center gap-3 px-2 py-2 text-sm font-semibold hover:bg-muted rounded-md"
+                className="hover:bg-muted flex items-center gap-3 rounded-md px-2 py-2 text-sm font-semibold"
                 onClick={() => setIsMenuOpen(false)}
               >
                 <UserPlus className="h-4 w-4" />

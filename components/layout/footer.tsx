@@ -1,13 +1,13 @@
-import Link from "next/link";
+import Link from 'next/link';
 
 export function Footer() {
   return (
-    <footer className="border-t border-border bg-card mt-auto">
+    <footer className="border-border bg-card mt-auto border-t">
       <div className="container mx-auto px-4 py-6">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-sm">
+        <div className="grid grid-cols-2 gap-6 text-sm md:grid-cols-4">
           <div>
-            <h4 className="font-medium mb-3">Browse</h4>
-            <div className="flex flex-col gap-2 text-muted-foreground">
+            <h4 className="mb-3 font-medium">Browse</h4>
+            <div className="text-muted-foreground flex flex-col gap-2">
               <Link
                 href="/listings?type=rent"
                 className="hover:text-foreground"
@@ -23,8 +23,8 @@ export function Footer() {
             </div>
           </div>
           <div>
-            <h4 className="font-medium mb-3">List</h4>
-            <div className="flex flex-col gap-2 text-muted-foreground">
+            <h4 className="mb-3 font-medium">List</h4>
+            <div className="text-muted-foreground flex flex-col gap-2">
               <Link href="/upload" className="hover:text-foreground">
                 Add Property
               </Link>
@@ -34,22 +34,22 @@ export function Footer() {
             </div>
           </div>
           <div>
-            <h4 className="font-medium mb-3">Areas</h4>
-            <div className="flex flex-col gap-2 text-muted-foreground">
+            <h4 className="mb-3 font-medium">Areas</h4>
+            <div className="text-muted-foreground flex flex-col gap-2">
               <span>Wuse</span>
               <span>Maitama</span>
               <span>Garki</span>
             </div>
           </div>
           <div>
-            <h4 className="font-medium mb-3">Support</h4>
-            <div className="flex flex-col gap-2 text-muted-foreground">
+            <h4 className="mb-3 font-medium">Support</h4>
+            <div className="text-muted-foreground flex flex-col gap-2">
               <span>Help Center</span>
               <span>Contact</span>
             </div>
           </div>
         </div>
-        <div className="mt-6 pt-6 border-t border-border text-center text-xs text-muted-foreground">
+        <div className="border-border text-muted-foreground mt-6 border-t pt-6 text-center text-xs">
           Domora
         </div>
       </div>
