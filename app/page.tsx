@@ -66,8 +66,8 @@ const page = () => {
             <div className="space-y-6">
               <h1 className="text-5xl leading-tight font-bold">
                 Find real houses in Abuja without{' '}
-                <span className="text-primary">stress</span> or{' '}
-                <span className="text-primary">hidden fees</span>
+                <span className="text-primary-600">stress</span> or{' '}
+                <span className="text-primary-600">hidden fees</span>
               </h1>
               <p className="text-muted-foreground text-lg">
                 Domorang shows only verified, available houses with clear
@@ -78,11 +78,11 @@ const page = () => {
                 <Input
                   type="email"
                   placeholder="Enter your email"
-                  className="border-primary h-12 w-full rounded-xl sm:rounded-full sm:pr-44"
+                  className="border-primary-600 h-12 w-full rounded-xl sm:rounded-full sm:pr-44"
                 />
                 <Button
                   size="lg"
-                  className="h-12 w-full rounded-xl px-6 sm:absolute sm:top-1/2 sm:right-1 sm:w-auto sm:-translate-y-1/2 sm:rounded-full"
+                  className="h-12 w-full rounded-xl px-6 sm:absolute sm:top-1/2 sm:right-1 sm:w-auto sm:-translate-y-1/2 sm:rounded-full bg-primary-600"
                 >
                   Get Early Access
                 </Button>
@@ -104,7 +104,7 @@ const page = () => {
               </div>
 
               <p className="text-center text-sm md:text-left">
-                Join <span className="text-primary font-semibold">100+</span>{' '}
+                Join <span className="text-primary-600 font-semibold">100+</span>{' '}
                 people already waiting
               </p>
             </div>
@@ -135,11 +135,11 @@ const page = () => {
               return (
                 <div
                   key={index}
-                  className="border-primary flex items-start gap-4 rounded-2xl border bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-blue-300 hover:shadow-lg"
+                  className="border-primary-300 flex items-start gap-4 rounded-2xl border bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-blue-300 hover:shadow-lg"
                 >
                   <div className="shrink-0">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-blue-200">
-                      <Icon className="text-primary h-6 w-6"></Icon>
+                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary-200">
+                      <Icon className="text-primary-600 h-6 w-6"></Icon>
                     </div>
                   </div>
 

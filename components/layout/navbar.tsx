@@ -36,7 +36,7 @@ const Navbar = () => {
           <Link href={`/register`}>
             <Button
               size="sm"
-              className="bg-primary hover:bg-secondary/90 text-secondary-foreground rounded-full px-6"
+              className="bg-primary-600 hover:bg-secondary/90 text-secondary-foreground rounded-full px-6"
             >
               Get Early Access
             </Button>
