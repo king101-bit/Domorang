@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     siteName: 'Domorang',
     images: [
       {
-        url: '/canvas.png',
+        url: '/canvas-v2.png',
         width: 1200,
         height: 630,
         alt: 'Domorang — Verified Houses in Abuja',
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     title: 'Domorang - Verified Houses in Abuja, No Hidden Fees',
     description:
       'Verified houses in Abuja. No inspection fees. No fake listings.',
-    images: ['/canvas.png'],
+    images: ['/canvas-v2.png'],
   },
 };
 
