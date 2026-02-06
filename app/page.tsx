@@ -200,7 +200,7 @@ const page = () => {
           </div>
         </div>
       </section>
-      <section className="bg-[#F7F7F7] py-20 md:py-32" id='how-it-works'>
+      <section className="bg-[#F7F7F7] py-20 md:py-32" id="how-it-works">
         <div className="mx-auto max-w-7xl px-6 text-center">
           <h1 className="mb-12 text-[43px] font-bold">How Domorang Works</h1>
 
@@ -278,7 +278,7 @@ const page = () => {
           </span>
         </div>
       </section>
-      <section className="py-20 md:py-32" id='why-us'>
+      <section className="py-20 md:py-32" id="why-us">
         <div className="mx-auto max-w-md px-6 text-center">
           <h1 className="mb-6 text-[43px] font-bold text-gray-900 transition-all duration-700 md:text-5xl">
             What Makes Us Different
@@ -588,7 +588,7 @@ const page = () => {
           </div>
         </div>
       </section>
-      <section className="bg-[#0891B2] py-20 md:py-32" id='faqs'>
+      <section className="bg-[#0891B2] py-20 md:py-32" id="faqs">
         <div className="mx-auto max-w-2xl px-6">
           <h1 className="mb-12 text-center text-[43px] font-bold text-white">
             Got Questions? We&apos;ve Got Answers
@@ -721,18 +721,18 @@ const page = () => {
             </div>
 
             {/* Email Form - Inline on desktop, stacked on mobile */}
-          <div className="mx-auto max-w-3xl">
-  <div className="flex flex-col gap-3 sm:relative sm:rounded-3xl sm:border-2 sm:border-[#0891B2] sm:bg-white sm:p-2">
-    <input
-      type="email"
-      placeholder="Enter your email"
-      className="w-full rounded-lg border-2 border-[#0891B2] bg-white px-6 py-3 text-base focus:outline-none sm:border-0 sm:rounded-lg sm:pr-48"
-    />
-    <button className="w-full shrink-0 rounded-lg bg-[#0891B2] px-8 py-3 text-base font-semibold text-white transition-colors hover:bg-[#0891B2]/90 sm:absolute sm:top-1/2 sm:right-2 sm:w-auto sm:-translate-y-1/2 sm:rounded-lg">
-      Get Early Access
-    </button>
-  </div>
-</div>
+            <div className="mx-auto max-w-3xl">
+              <div className="flex flex-col gap-3 sm:relative sm:rounded-3xl sm:border-2 sm:border-[#0891B2] sm:bg-white sm:p-2">
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  className="w-full rounded-lg border-2 border-[#0891B2] bg-white px-6 py-3 text-base focus:outline-none sm:rounded-lg sm:border-0 sm:pr-48"
+                />
+                <button className="w-full shrink-0 rounded-lg bg-[#0891B2] px-8 py-3 text-base font-semibold text-white transition-colors hover:bg-[#0891B2]/90 sm:absolute sm:top-1/2 sm:right-2 sm:w-auto sm:-translate-y-1/2 sm:rounded-lg">
+                  Get Early Access
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
