@@ -74,7 +74,7 @@ const Navbar = () => {
                 );
               })}
 
-              {/* Register button */}
+              {/* Register button
               <Link
                 href="/register"
                 className="hover:bg-muted flex items-center gap-3 rounded-md px-2 py-2 text-sm font-semibold"
@@ -82,7 +82,7 @@ const Navbar = () => {
               >
                 <UserPlus className="h-4 w-4" />
                 Register
-              </Link>
+              </Link> */}
             </div>
           </nav>
         )}
