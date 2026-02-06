@@ -1,17 +1,17 @@
 'use client';
 import Link from 'next/link';
 import { Button } from '../ui/button';
-import { Home, Menu, Search, Upload, UserPlus, Users, X } from 'lucide-react';
+import { HelpCircle, Home, Menu, MessageCircleQuestion, Search, Sparkles, Star, Upload, UserPlus, Users, Workflow, X } from 'lucide-react';
 import { useState } from 'react';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
-    { link: '/listings', label: 'How it works', icon: Search },
-    { link: '/agents', label: 'Why Us', icon: Users },
-    { link: '/properties', label: 'FAQs', icon: Upload },
-  ];
+ { link: "#how-it-works", label: "How it works", icon: Workflow },
+  { link: "#why-us", label: "Why Us", icon: Star },
+  { link: "#faqs", label: "FAQs", icon: HelpCircle },
+];
 
   return (
     <header className="bg-card border-border sticky top-0 z-50 border-b">

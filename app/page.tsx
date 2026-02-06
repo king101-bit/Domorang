@@ -200,7 +200,7 @@ const page = () => {
           </div>
         </div>
       </section>
-      <section className="bg-[#F7F7F7] py-20 md:py-32">
+      <section className="bg-[#F7F7F7] py-20 md:py-32" id='how-it-works'>
         <div className="mx-auto max-w-7xl px-6 text-center">
           <h1 className="mb-12 text-[43px] font-bold">How Domorang Works</h1>
 
@@ -278,7 +278,7 @@ const page = () => {
           </span>
         </div>
       </section>
-      <section className="py-20 md:py-32">
+      <section className="py-20 md:py-32" id='why-us'>
         <div className="mx-auto max-w-md px-6 text-center">
           <h1 className="mb-6 text-[43px] font-bold text-gray-900 transition-all duration-700 md:text-5xl">
             What Makes Us Different
@@ -588,7 +588,7 @@ const page = () => {
           </div>
         </div>
       </section>
-      <section className="bg-[#0891B2] py-20 md:py-32">
+      <section className="bg-[#0891B2] py-20 md:py-32" id='faqs'>
         <div className="mx-auto max-w-2xl px-6">
           <h1 className="mb-12 text-center text-[43px] font-bold text-white">
             Got Questions? We&apos;ve Got Answers
