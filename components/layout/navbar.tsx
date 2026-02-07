@@ -2,16 +2,10 @@
 import Link from 'next/link';
 import { Button } from '../ui/button';
 import {
+  Book,
   HelpCircle,
-  Home,
   Menu,
-  MessageCircleQuestion,
-  Search,
-  Sparkles,
   Star,
-  Upload,
-  UserPlus,
-  Users,
   Workflow,
   X,
 } from 'lucide-react';
@@ -24,6 +18,7 @@ const Navbar = () => {
     { link: '#how-it-works', label: 'How it works', icon: Workflow },
     { link: '#why-us', label: 'Why Us', icon: Star },
     { link: '#faqs', label: 'FAQs', icon: HelpCircle },
+    { link: '#our-story', label: 'Our Story', icon: Book },
   ];
 
   return (

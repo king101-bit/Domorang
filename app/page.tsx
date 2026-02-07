@@ -366,7 +366,7 @@ const page = () => {
               </div>
             </div>
           </div>
-          <div className="bg-primary-50 w-full max-w-sm rounded-2xl border-2 border-[#0891B2] p-8 md:max-w-none">
+          <div id="our-story" className="bg-primary-50 w-full max-w-sm rounded-2xl border-2 border-[#0891B2] p-8 md:max-w-none">
             <h3 className="text-primary-600 mb-3 text-left text-2xl font-semibold tracking-wide">
               THE STORY
             </h3>
