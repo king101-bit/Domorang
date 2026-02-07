@@ -1,14 +1,7 @@
 'use client';
 import Link from 'next/link';
 import { Button } from '../ui/button';
-import {
-  Book,
-  HelpCircle,
-  Menu,
-  Star,
-  Workflow,
-  X,
-} from 'lucide-react';
+import { Book, HelpCircle, Menu, Star, Workflow, X } from 'lucide-react';
 import { useState } from 'react';
 
 const Navbar = () => {

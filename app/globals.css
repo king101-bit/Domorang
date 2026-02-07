@@ -116,13 +116,13 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
-  --color-primary-50: oklch(95% 0.02 216.42);
   --color-primary-100: oklch(90% 0.04 216.42);
   --color-primary-200: oklch(80% 0.06 216.42);
   --color-primary-300: oklch(70% 0.08 216.42);
   --color-primary-400: oklch(65% 0.1 216.42);
   --color-primary-500: oklch(62.34% 0.111 216.42);
   --color-primary-600: oklch(55% 0.12 216.42);
+  --color-primary-650: oklch(47.5% 0.095 216.42);
   --color-primary-700: oklch(45% 0.13 216.42);
   --color-primary-800: oklch(35% 0.12 216.42);
   --color-primary-900: oklch(25% 0.1 216.42);

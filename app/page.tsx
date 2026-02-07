@@ -366,7 +366,10 @@ const page = () => {
               </div>
             </div>
           </div>
-          <div id="our-story" className="bg-primary-50 w-full max-w-sm rounded-2xl border-2 border-[#0891B2] p-8 md:max-w-none">
+          <div
+            id="our-story"
+            className="bg-primary-50 w-full max-w-sm rounded-2xl border-2 border-[#0891B2] p-8 md:max-w-none"
+          >
             <h3 className="text-primary-600 mb-3 text-left text-2xl font-semibold tracking-wide">
               THE STORY
             </h3>
@@ -742,7 +745,7 @@ const page = () => {
         </div>
       </section>
 
-      <footer className="bg-[#0891B2] text-white">
+      <footer className="bg-primary-650 text-white">
         <div className="mx-auto max-w-7xl px-6 py-12 md:py-16">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-3 lg:gap-12">
             {/* Brand Section */}
