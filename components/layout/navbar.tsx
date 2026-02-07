@@ -46,7 +46,7 @@ const Navbar = () => {
               </Link>
             ))}
           </nav>
-          <Link href={`/register`}>
+          <Link href={`/register`} className="hidden md:block">
             <Button
               size="sm"
               className="bg-primary-600 hover:bg-secondary/90 text-secondary-foreground rounded-full px-6"
@@ -87,15 +87,14 @@ const Navbar = () => {
                 );
               })}
 
-              {/* Register button
-              <Link
-                href="/register"
-                className="hover:bg-muted flex items-center gap-3 rounded-md px-2 py-2 text-sm font-semibold"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                <UserPlus className="h-4 w-4" />
-                Register
-              </Link> */}
+              <Link href={`/register`}>
+                <Button
+                  size="sm"
+                  className="bg-primary-600 hover:bg-secondary/90 text-secondary-foreground rounded-full px-6"
+                >
+                  Get Early Access
+                </Button>
+              </Link>
             </div>
           </nav>
         )}
