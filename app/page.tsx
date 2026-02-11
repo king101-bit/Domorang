@@ -73,7 +73,7 @@ const page = () => {
   return (
     <>
       <Navbar />
-      <section className="bg-[#E4F5FF] py-20">
+      <section className="bg-[#E4F5FF] py-20" id="#waitlist">
         <div className="container mx-auto px-4">
           <div className="grid items-center gap-12 md:grid-cols-2">
             {/* Text Content */}

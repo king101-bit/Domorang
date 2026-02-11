@@ -34,12 +34,12 @@ const Navbar = () => {
               </Link>
             ))}
           </nav>
-          <Link href={`/register`} className="hidden md:block">
+          <Link href="#waitlist" className="hidden md:block">
             <Button
               size="sm"
               className="bg-primary-600 hover:bg-secondary/90 text-secondary-foreground rounded-full px-6"
             >
-              Get Early Access
+              Join the Waitlist
             </Button>
           </Link>
           {/* Mobile menu toggle */}
@@ -75,12 +75,12 @@ const Navbar = () => {
                 );
               })}
 
-              <Link href={`/register`}>
+              <Link href="#waitlist">
                 <Button
                   size="sm"
                   className="bg-primary-600 hover:bg-secondary/90 text-secondary-foreground rounded-full px-6"
                 >
-                  Get Early Access
+                  Join the Waitlist
                 </Button>
               </Link>
             </div>
