@@ -1,3 +1,4 @@
+import { Footer } from '@/components/layout/footer';
 import Navbar from '@/components/layout/navbar';
 import StatCard from '@/components/layout/StatCard';
 import WaitlistForm from '@/components/layout/waitlist-form';
@@ -716,8 +717,7 @@ const page = () => {
           </div>
         </div>
       </section>
-
-
+      <Footer />
     </>
   );
 };
