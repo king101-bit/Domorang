@@ -1,5 +1,6 @@
 import Navbar from '@/components/layout/navbar';
 import StatCard from '@/components/layout/StatCard';
+import WaitlistForm from '@/components/layout/waitlist-form';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import {
@@ -87,18 +88,10 @@ const page = () => {
                 prices, so you stop wasting time, money, and energy.
               </p>
 
-              <div className="relative flex w-full max-w-md flex-col gap-3 sm:flex-row sm:gap-0">
-                <Input
-                  type="email"
-                  placeholder="Enter your email"
-                  className="border-primary-600 h-12 w-full rounded-xl sm:rounded-full sm:pr-44"
-                />
-                <Button
-                  size="lg"
-                  className="bg-primary-600 h-12 w-full rounded-xl px-6 sm:absolute sm:top-1/2 sm:right-1 sm:w-auto sm:-translate-y-1/2 sm:rounded-full"
-                >
-                  Get Early Access
-                </Button>
+              <div className="mx-auto max-w-md">
+                {' '}
+                {/* Center it in the hero */}
+                <WaitlistForm variant="hero" />
               </div>
 
               <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-xs">
@@ -727,20 +720,7 @@ const page = () => {
                 <p className="text-base">No spam, just important updates</p>
               </div>
             </div>
-
-            {/* Email Form - Inline on desktop, stacked on mobile */}
-            <div className="mx-auto max-w-3xl">
-              <div className="flex flex-col gap-3 sm:relative sm:rounded-3xl sm:border-2 sm:border-[#0891B2] sm:bg-white sm:p-2">
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  className="w-full rounded-lg border-2 border-[#0891B2] bg-white px-6 py-3 text-base focus:outline-none sm:rounded-lg sm:border-0 sm:pr-48"
-                />
-                <button className="w-full shrink-0 rounded-lg bg-[#0891B2] px-8 py-3 text-base font-semibold text-white transition-colors hover:bg-[#0891B2]/90 sm:absolute sm:top-1/2 sm:right-2 sm:w-auto sm:-translate-y-1/2 sm:rounded-lg">
-                  Get Early Access
-                </button>
-              </div>
-            </div>
+            <WaitlistForm />
           </div>
         </div>
       </section>
