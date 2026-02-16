@@ -5,7 +5,7 @@ export default function WhyUs() {
     <>
       <section className="py-20 md:py-32" id="why-us">
         <div className="mx-auto max-w-md px-6 text-center md:max-w-4xl lg:max-w-6xl">
-          <h1 className="mb-6 text-[43px] font-bold text-gray-900 transition-all duration-700 md:text-5xl">
+          <h1 className="mb-6 text-3xl font-bold text-gray-900 transition-all duration-700 md:text-5xl">
             What Makes Us Different
           </h1>
           <div className="mb-8 space-y-6">

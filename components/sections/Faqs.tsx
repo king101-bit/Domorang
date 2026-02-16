@@ -5,7 +5,7 @@ function Faqs() {
     <>
       <section className="bg-[#0891B2] py-20 md:py-32" id="faqs">
         <div className="mx-auto max-w-2xl px-6">
-          <h1 className="mb-12 text-center text-[43px] font-bold text-white">
+          <h1 className="mb-12 text-center text-3xl font-bold text-white md:text-[43px]">
             Got Questions? We&apos;ve Got Answers
           </h1>
 

@@ -54,7 +54,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Domorang - Verified Houses in Abuja',
-    description: 'Verified houses in Abuja. No inspection fees, no fake listings, no stress.', // 76 chars - Twitter optimal
+    description:
+      'Verified houses in Abuja. No inspection fees, no fake listings, no stress.', // 76 chars - Twitter optimal
     images: ['/og-image.png'],
     creator: '@domora_ng',
   },

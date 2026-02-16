@@ -33,7 +33,7 @@ export default function Stats() {
       <section className="bg-[#E4F5FF] py-20 md:py-32">
         <div className="mx-auto max-w-6xl px-6">
           <div className="mb-16 text-center">
-            <h2 className="text-secondary mb-4 text-5xl font-bold md:text-5xl">
+            <h2 className="text-secondary mb-4 text-3xl font-bold md:text-5xl">
               We Surveyed 150+ House Hunters in Abuja
             </h2>
             <p className="mb-8 text-xl text-gray-700">

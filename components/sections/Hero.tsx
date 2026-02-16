@@ -10,7 +10,7 @@ export default function Hero() {
           <div className="grid items-center gap-12 md:grid-cols-2">
             {/* Text Content */}
             <div className="space-y-6">
-              <h1 className="text-[43px] leading-tight font-bold">
+              <h1 className="text-3xl leading-tight font-bold md:text-[43px]">
                 Find real houses in Abuja without{' '}
                 <span className="text-primary-600">stress</span> or{' '}
                 <span className="text-primary-600">hidden fees</span>

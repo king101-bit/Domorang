@@ -5,7 +5,7 @@ export default function Roadmap() {
     <>
       <section className="bg-[#F7F7F7] py-20 md:py-32">
         <div className="mx-auto max-w-6xl px-6">
-          <h1 className="mb-16 text-center text-[43px] font-bold">
+          <h1 className="mb-16 text-center text-3xl font-bold md:text-[43px]">
             Our Launch Roadmap
           </h1>
 
@@ -13,7 +13,7 @@ export default function Roadmap() {
           <div className="hidden md:block">
             <div className="relative">
               {/* Timeline Line */}
-              <div className="absolute top-[30px] right-0 left-0 h-1">
+              <div className="absolute top-7.5 right-0 left-0 h-1">
                 <div
                   className="h-full bg-[#0891B2]"
                   style={{ width: '20%' }}
@@ -26,7 +26,7 @@ export default function Roadmap() {
                 {/* Phase 1 - Completed */}
                 <div className="text-center">
                   <div className="relative z-10 mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full border-4 border-[#0891B2] bg-white">
-                    <Check className="h-8 w-8 stroke-[3] text-green-500" />
+                    <Check className="h-8 w-8 stroke-3 text-green-500" />
                   </div>
                   <h3 className="mb-2 text-base font-bold">
                     Phase 1: Waitlist & Community
@@ -108,7 +108,7 @@ export default function Roadmap() {
           <div className="md:hidden">
             <div className="relative pl-12">
               {/* Vertical Line */}
-              <div className="absolute top-0 bottom-0 left-[19px] w-1">
+              <div className="absolute top-0 bottom-0 left-4.75 w-1">
                 <div className="h-24 bg-[#0891B2]"></div>
                 <div className="absolute top-24 right-0 bottom-0 left-0 bg-gray-300"></div>
               </div>
@@ -118,7 +118,7 @@ export default function Roadmap() {
                 {/* Phase 1 */}
                 <div className="relative">
                   <div className="absolute -left-12 flex h-10 w-10 items-center justify-center rounded-full border-4 border-[#0891B2] bg-white">
-                    <Check className="h-5 w-5 stroke-[3] text-green-500" />
+                    <Check className="h-5 w-5 stroke-3 text-green-500" />
                   </div>
                   <h3 className="mb-1 text-lg font-bold">
                     Phase 1: Waitlist & Community

@@ -6,7 +6,7 @@ function CTA() {
     <section className="bg-[#F7F7F7] py-20 md:py-32">
       <div className="mx-auto max-w-4xl px-6">
         <div className="text-center">
-          <h1 className="mb-6 text-[43px] leading-tight font-bold">
+          <h1 className="mb-6 text-3xl leading-tight font-bold md:text-[43px]">
             Ready to Find Your Dream Home in Abuja?
           </h1>
 

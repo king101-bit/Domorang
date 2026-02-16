@@ -5,7 +5,9 @@ export default function HowItWorks() {
     <>
       <section className="bg-[#F7F7F7] py-20 md:py-32" id="how-it-works">
         <div className="mx-auto max-w-7xl px-6 text-center">
-          <h1 className="mb-12 text-[43px] font-bold">How Domorang Works</h1>
+          <h1 className="mb-12 text-3xl font-bold md:text-[43px]">
+            How Domorang Works
+          </h1>
 
           <div className="mb-12 flex flex-col items-center justify-center gap-6 md:flex-row md:gap-0">
             {/* Step 1 */}

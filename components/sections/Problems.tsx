@@ -30,8 +30,7 @@ export default function Problems() {
       <section className="py-20 md:py-32">
         <div className="mx-auto max-w-6xl px-6">
           <div className="mb-16 text-center">
-            <h1 className="mb-6 text-[45px] font-bold text-gray-900 transition-all duration-700 md:text-5xl">
-              {' '}
+            <h1 className="mb-6 text-[28px] font-bold text-gray-900 transition-all duration-700 md:text-[45px]">
               House Hunting in Abuja is Broken
             </h1>
           </div>
