@@ -63,7 +63,7 @@ export function Footer() {
             <h3 className="text-lg font-semibold">Contact Us</h3>
             <div className="flex flex-col gap-3">
               <a
-                href="https://twitter.com/domorang"
+                href="https://twitter.com/domora_ng"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-sm text-white/90 transition-colors hover:text-white"
@@ -72,7 +72,7 @@ export function Footer() {
                 <span>X(twitter)</span>
               </a>
               <a
-                href="https://instagram.com/domorang"
+                href="https://instagram.com/domora_ng"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-sm text-white/90 transition-colors hover:text-white"
@@ -80,7 +80,7 @@ export function Footer() {
                 <FaInstagram className="h-5 w-5" />
                 <span>Instagram</span>
               </a>
-              <a
+              {/* <a
                 href="https://facebook.com/domorang"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -88,7 +88,7 @@ export function Footer() {
               >
                 <FaFacebook className="h-5 w-5" />
                 <span>Facebook</span>
-              </a>
+              </a> */}
             </div>
           </div>
         </div>
