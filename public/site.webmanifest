@@ -1,0 +1,7 @@
+{
+  "name": "Domorang",
+  "short_name": "Domorang",
+  "theme_color": "#0891B2",
+  "background_color": "#E4F5FF",
+  "display": "standalone"
+}

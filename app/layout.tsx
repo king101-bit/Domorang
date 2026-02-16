@@ -16,34 +16,65 @@ const montserrat = Montserrat({
 export const metadata: Metadata = {
   title: 'Domorang - Verified Houses in Abuja, No Hidden Fees',
   description:
-    "Join Domorang's waitlist to get early access to verified, real houses in Abuja. Say goodbye to inspection fees and fake listings — find your dream home faster and hassle-free!",
-
+    'Find verified houses in Abuja without stress or hidden fees. Real listings, transparent prices, trusted agents. Join 100+ on our waitlist.', // 146 chars
   metadataBase: new URL('https://www.domorang.com'),
-
+  keywords: [
+    'houses in Abuja',
+    'rent in Abuja',
+    'verified listings Abuja',
+    'apartment rental Abuja',
+    'real estate Abuja',
+    'no agent fees',
+  ],
+  authors: [{ name: 'Domorang' }],
+  creator: 'Domorang',
+  publisher: 'Domorang',
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
   openGraph: {
     title: 'Domorang - Verified Houses in Abuja, No Hidden Fees',
     description:
-      "Join Domorang's waitlist to get early access to verified, real houses in Abuja. Say goodbye to inspection fees and fake listings — find your dream home faster and hassle-free!",
+      'Find verified houses in Abuja without stress or hidden fees. Real listings, transparent prices, trusted agents. Join 100+ on our waitlist.',
     url: 'https://www.domorang.com',
     siteName: 'Domorang',
+    locale: 'en_NG',
+    type: 'website',
     images: [
       {
-        url: '/canvas-v3.png',
+        url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Domorang — Verified Houses in Abuja',
+        alt: 'Domorang - Verified Houses in Abuja',
       },
     ],
-    type: 'website',
   },
-
   twitter: {
     card: 'summary_large_image',
-    title: 'Domorang - Verified Houses in Abuja, No Hidden Fees',
-    description:
-      'Verified houses in Abuja. No inspection fees. No fake listings.',
-    images: ['/canvas-v3.png'],
+    title: 'Domorang - Verified Houses in Abuja',
+    description: 'Verified houses in Abuja. No inspection fees, no fake listings, no stress.', // 76 chars - Twitter optimal
+    images: ['/og-image.png'],
+    creator: '@domora_ng',
   },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  // icons: {
+  //   icon: '/favicon.ico',
+  //   shortcut: '/favicon-16x16.png',
+  //   apple: '/apple-touch-icon.png',
+  // },
+  manifest: '/site.webmanifest',
 };
 
 export default function RootLayout({
