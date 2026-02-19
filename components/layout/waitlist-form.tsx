@@ -1,7 +1,7 @@
 'use client';
 import { useState } from 'react';
 import { cn } from '@/lib/utils';
-import { addToWaitlist } from '@/app/actions';
+import { addToWaitlist } from '@/lib/actions';
 import { toast } from 'sonner';
 
 type WaitlistFormProps = {
