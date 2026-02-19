@@ -27,7 +27,7 @@ export async function addToWaitlist(formData: FormData) {
     }
 
     await resend.emails.send({
-      from: 'Domorang <hello@mail.domorang.com>',
+      from: process.env.RESEND_FROM_EMAIL!,
       to: email,
       subject: 'Welcome to Domorang Waitlist!',
       react: WaitlistWelcomeEmail({ email }),
