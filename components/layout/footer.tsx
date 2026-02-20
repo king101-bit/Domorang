@@ -1,4 +1,4 @@
-import { FaXTwitter } from 'react-icons/fa6';
+import { FaEnvelope, FaXTwitter } from 'react-icons/fa6';
 import { FaFacebook, FaInstagram } from 'react-icons/fa';
 
 export function Footer() {
@@ -14,17 +14,17 @@ export function Footer() {
               planning to move to Abuja. We help you find real houses for rent
               and connect you with trusted agents and landlords.
             </p>
-            <div className="pt-2">
+            {/* <div className="pt-2">
               <p className="text-sm text-white/90">
                 Email:{' '}
                 <a
-                  href="mailto:domorahomes@gmail.com"
+                  href="mailto:hello@mail.domorang.com"
                   className="text-white transition-colors hover:text-white/80"
                 >
                   domorahomes@gmail.com
                 </a>
               </p>
-            </div>
+            </div> */}
           </div>
 
           {/* Quick Links */}
@@ -80,15 +80,13 @@ export function Footer() {
                 <FaInstagram className="h-5 w-5" />
                 <span>Instagram</span>
               </a>
-              {/* <a
-                href="https://facebook.com/domorang"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 text-sm text-white/90 transition-colors hover:text-white"
+              <a
+                href="mailto:hello@mail.domorang.com"
+                className="flex items-center gap-2 text-sm text-white/90 transition-colors hover:text-white/80"
               >
-                <FaFacebook className="h-5 w-5" />
-                <span>Facebook</span>
-              </a> */}
+                <FaEnvelope className="h-5 w-5" />
+                <span>hello@mail.domorang.com</span>
+              </a>
             </div>
           </div>
         </div>
