@@ -6,7 +6,7 @@ import { useState } from 'react';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+  
   const navItems = [
     { link: '#how-it-works', label: 'How it works', icon: Workflow },
     { link: '#why-us', label: 'Why Us', icon: Star },
@@ -34,14 +34,20 @@ const Navbar = () => {
               </Link>
             ))}
           </nav>
-          <Link href="#waitlist" className="hidden md:block">
-            <Button
-              size="sm"
-              className="bg-primary-600 hover:bg-secondary/90 text-secondary-foreground rounded-full px-6"
-            >
-              Join the Waitlist
-            </Button>
-          </Link>
+
+          {/* Desktop buttons */}
+          <div className="hidden md:flex flex-row gap-4">
+            <Link href="#waitlist">
+              <Button
+                size="sm"
+                className="bg-primary-100 text-primary-600 hover:bg-secondary/90 rounded-full px-6"
+              >
+                Register
+              </Button>
+            </Link>
+           
+          </div>
+
           {/* Mobile menu toggle */}
           <button
             className="p-2 md:hidden"
@@ -75,14 +81,25 @@ const Navbar = () => {
                 );
               })}
 
-              <Link href="#waitlist">
-                <Button
-                  size="sm"
-                  className="bg-primary-600 hover:bg-secondary/90 text-secondary-foreground rounded-full px-6"
-                >
-                  Join the Waitlist
-                </Button>
-              </Link>
+              {/* Mobile buttons */}
+              <div className="mt-2 flex flex-col gap-3 px-2">
+                <Link href="#waitlist" onClick={() => setIsMenuOpen(false)}>
+                  <Button
+                    size="sm"
+                    className="w-full bg-primary-600 text-white hover:bg-secondary/90 rounded-full px-6"
+                  >
+                    Register
+                  </Button>
+                </Link>
+                <Link href="#waitlist" onClick={() => setIsMenuOpen(false)}>
+                  <Button
+                    size="sm"
+                    className="w-full bg-primary-100 text-primary-600 hover:bg-secondary/90 rounded-full px-6"
+                  >
+                    List Property
+                  </Button>
+                </Link>
+              </div>
             </div>
           </nav>
         )}
