@@ -6,7 +6,7 @@ import { useState } from 'react';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  
+
   const navItems = [
     { link: '#how-it-works', label: 'How it works', icon: Workflow },
     { link: '#why-us', label: 'Why Us', icon: Star },
@@ -15,7 +15,7 @@ const Navbar = () => {
   ];
 
   return (
-    <header className="bg-card border-border sticky top-0 z-50 border-b">
+    <header className="bg-[#E4F5FF] border-border sticky top-0 z-50">
       <div className="container mx-auto px-4">
         <div className="flex h-14 items-center justify-between">
           <Link href={`/`} className="flex items-center gap-2">
@@ -36,7 +36,7 @@ const Navbar = () => {
           </nav>
 
           {/* Desktop buttons */}
-          <div className="hidden md:flex flex-row gap-4">
+          <div className="hidden flex-row gap-4 md:flex">
             <Link href="#waitlist">
               <Button
                 size="sm"
@@ -45,7 +45,6 @@ const Navbar = () => {
                 Register
               </Button>
             </Link>
-           
           </div>
 
           {/* Mobile menu toggle */}
@@ -86,7 +85,7 @@ const Navbar = () => {
                 <Link href="#waitlist" onClick={() => setIsMenuOpen(false)}>
                   <Button
                     size="sm"
-                    className="w-full bg-primary-600 text-white hover:bg-secondary/90 rounded-full px-6"
+                    className="bg-primary-600 hover:bg-secondary/90 w-full rounded-full px-6 text-white"
                   >
                     Register
                   </Button>
@@ -94,7 +93,7 @@ const Navbar = () => {
                 <Link href="#waitlist" onClick={() => setIsMenuOpen(false)}>
                   <Button
                     size="sm"
-                    className="w-full bg-primary-100 text-primary-600 hover:bg-secondary/90 rounded-full px-6"
+                    className="bg-primary-100 text-primary-600 hover:bg-secondary/90 w-full rounded-full px-6"
                   >
                     List Property
                   </Button>
