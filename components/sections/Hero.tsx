@@ -6,7 +6,8 @@ import MapComponent from '../layout/MapComponent';
 
 export default function Hero() {
   return (
-    <section className="bg-[#E4F5FF] py-20 md:py-32">
+    <section className="bg-primary-100 flex min-h-screen flex-col items-center justify-center py-20">
+      {' '}
       <div className="container mx-auto px-4">
         <div className="mx-auto max-w-4xl text-center">
           {/* Heading */}

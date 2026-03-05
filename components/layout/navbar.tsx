@@ -15,15 +15,16 @@ const Navbar = () => {
   ];
 
   return (
-    <header className="bg-[#E4F5FF] border-border sticky top-0 z-50">
+    <header className="border-border bg-primary-100 sticky top-0 z-50">
       <div className="container mx-auto px-4">
-        <div className="flex h-14 items-center justify-between">
-          <Link href={`/`} className="flex items-center gap-2">
+        <div className="grid h-14 grid-cols-[auto_1fr_auto] items-center gap-8">
+          {' '}
+          {/* Logo - left */}
+          <Link href="/" className="flex items-center gap-2">
             <span className="text-sm font-semibold">Domorang</span>
           </Link>
-
-          {/* Desktop nav */}
-          <nav className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-6 md:flex">
+          {/* Nav links - center */}
+          <nav className="hidden items-center justify-center gap-6 md:flex">
             {navItems.map((item) => (
               <Link
                 key={item.link}
@@ -34,33 +35,32 @@ const Navbar = () => {
               </Link>
             ))}
           </nav>
-
-          {/* Desktop buttons */}
-          <div className="hidden flex-row gap-4 md:flex">
-            <Link href="#waitlist">
-              <Button
-                size="sm"
-                className="bg-primary-100 text-primary-600 hover:bg-secondary/90 rounded-full px-6"
-              >
-                Register
-              </Button>
-            </Link>
+          {/* Buttons - right */}
+          <div className="hidden items-center justify-end gap-3 md:flex">
+            <Button
+              size="sm"
+              className="bg-primary-600 hover:bg-primary-700 rounded-full px-6 text-white"
+            >
+              Sign Up
+            </Button>
+            <Button
+              size="sm"
+              className="border-primary-600 text-primary-600 hover:bg-primary-600/10 rounded-full border bg-transparent px-6"
+            >
+              Sign In
+            </Button>
           </div>
-
-          {/* Mobile menu toggle */}
-          <button
-            className="p-2 md:hidden"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            aria-label="Toggle menu"
-          >
-            {isMenuOpen ? (
-              <X className="h-5 w-5" />
-            ) : (
-              <Menu className="h-5 w-5" />
-            )}
-          </button>
+          {/* Mobile toggle - right on mobile */}
+          <div className="flex justify-end md:hidden">
+            <button className="p-2" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+              {isMenuOpen ? (
+                <X className="h-5 w-5" />
+              ) : (
+                <Menu className="h-5 w-5" />
+              )}
+            </button>
+          </div>
         </div>
-
         {/* Mobile nav */}
         {isMenuOpen && (
           <nav className="border-border border-t py-4 md:hidden">
@@ -87,7 +87,7 @@ const Navbar = () => {
                     size="sm"
                     className="bg-primary-600 hover:bg-secondary/90 w-full rounded-full px-6 text-white"
                   >
-                    Register
+                    Sign In
                   </Button>
                 </Link>
                 <Link href="#waitlist" onClick={() => setIsMenuOpen(false)}>
