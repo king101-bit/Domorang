@@ -1,4 +1,6 @@
+import { Footer } from '@/components/layout/footer';
 import Navbar from '@/components/layout/navbar';
+import Cta from '@/components/sections/cta';
 import FAQ from '@/components/sections/faq';
 import Hero from '@/components/sections/Hero';
 import HowItWorks from '@/components/sections/HowItWorks';
@@ -14,6 +16,8 @@ const page = () => {
       <HowItWorks />
       <PropertyGallery />
       <FAQ />
+      <Cta />
+      <Footer />
     </>
   );
 };

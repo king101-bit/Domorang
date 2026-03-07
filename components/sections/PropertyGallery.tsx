@@ -25,12 +25,12 @@ const PropertyGallery = () => {
           <div className="relative row-span-2 overflow-hidden rounded-2xl">
             <Image
               src="/house_1.avif"
-              width={800}
-              height={600}
+              width={450}
+              height={500}
               alt="Featured property"
               className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
             />
-            <div className="absolute right-0 bottom-0 left-0 bg-gradient-to-t from-black/50 to-transparent p-4">
+            <div className="absolute right-0 bottom-0 left-0 bg-linear-to-t from-black/50 to-transparent p-4">
               <span className="text-xs font-medium text-white/80">
                 Asokoro, Abuja
               </span>
@@ -41,12 +41,12 @@ const PropertyGallery = () => {
           <div className="relative overflow-hidden rounded-2xl">
             <Image
               src="/house_2.avif"
-              width={800}
+              width={448}
               height={448}
               alt="Property"
               className="h-56 w-full object-cover transition-transform duration-500 hover:scale-105"
             />
-            <div className="absolute right-0 bottom-0 left-0 bg-gradient-to-t from-black/50 to-transparent p-4">
+            <div className="absolute right-0 bottom-0 left-0 bg-linear-to-t from-black/50 to-transparent p-4">
               <span className="text-xs font-medium text-white/80">
                 Maitama, Abuja
               </span>
@@ -57,12 +57,12 @@ const PropertyGallery = () => {
           <div className="relative overflow-hidden rounded-2xl">
             <Image
               src="/house_3.avif"
-              width={800}
+              width={448}
               height={448}
               alt="Property"
               className="h-56 w-full object-cover transition-transform duration-500 hover:scale-105"
             />
-            <div className="absolute right-0 bottom-0 left-0 bg-gradient-to-t from-black/50 to-transparent p-4">
+            <div className="absolute right-0 bottom-0 left-0 bg-linear-to-t from-black/50 to-transparent p-4">
               <span className="text-xs font-medium text-white/80">
                 Wuse 2, Abuja
               </span>
