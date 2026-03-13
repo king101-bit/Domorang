@@ -1,18 +1,15 @@
 import type { Metadata } from 'next';
-import { Inter, Montserrat, Geist } from 'next/font/google';
+import { Inter, Montserrat } from 'next/font/google';
 import './globals.css';
 import { Toaster } from '@/components/ui/sonner';
-import { cn } from "@/lib/utils";
-
-const geist = Geist({subsets:['latin'],variable:'--font-sans'});
-
-const inter = Inter({
-  variable: '--font-inter',
-  subsets: ['latin'],
-});
 
 const montserrat = Montserrat({
   variable: '--font-montserrat',
+  subsets: ['latin'],
+});
+
+const inter = Inter({
+  variable: '--font-inter',
   subsets: ['latin'],
 });
 
@@ -87,8 +84,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={cn("font-sans", geist.variable)}>
-      <body className={`${inter.variable} ${montserrat.variable} antialiased`}>
+    <html lang="en">
+      <body className={`${montserrat.className} ${inter.variable} antialiased`}>
+        {' '}
         <main>{children}</main>
         <Toaster position="top-center" />
       </body>
