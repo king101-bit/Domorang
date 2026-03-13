@@ -37,12 +37,14 @@ const Navbar = () => {
           </nav>
           {/* Buttons - right */}
           <div className="hidden items-center justify-end gap-3 md:flex">
-            <Button
+            <Link href={`/auth/signup`}>
+             <Button
               size="sm"
               className="bg-primary-600 hover:bg-primary-700 rounded-full px-6 text-white"
             >
               Sign Up
             </Button>
+            </Link>
             <Button
               size="sm"
               className="border-primary-600 text-primary-600 hover:bg-primary-600/10 rounded-full border bg-transparent px-6"
