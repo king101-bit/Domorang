@@ -63,7 +63,7 @@ const PropertyCard = ({ property }: { property: Property }) => {
         </div>
 
         {/* Stats */}
-        <div className="border-border -mx-4 mt-1 flex items-center gap-4 rounded-b-xl border-t bg-gray-50 px-4 pt-2 pb-1">
+        <div className="border-border -mx-4 mt-1 flex items-center gap-4 rounded-b-xl bg-gray-50 px-4 pt-2 pb-1">
           <div className="text-muted-foreground flex items-center gap-1.5">
             <Bed className="text-primary-600 h-3.5 w-3.5" />
             <span className="text-xs">{property.bedrooms} Bedroom</span>

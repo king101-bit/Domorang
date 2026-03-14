@@ -2,6 +2,14 @@ import Navbar from '@/components/layout/navbar';
 import PropertyGallery from '@/components/properties/PropertyGallery';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from '@/components/ui/dialog';
 import { getPropertyById } from '@/lib/data/data';
 import {
   ArrowLeft,
@@ -154,7 +162,7 @@ export default async function PropertyPage({ params }: Props) {
                 <div className="relative h-12 w-12 overflow-hidden rounded-full bg-gray-200">
                   {/* placeholder avatar */}
                   <div className="bg-primary-100 text-primary-600 flex h-full w-full items-center justify-center text-sm font-semibold">
-                    CO
+                    NO
                   </div>
                 </div>
                 <div>
@@ -171,19 +179,37 @@ export default async function PropertyPage({ params }: Props) {
               <Button className="bg-primary-600 hover:bg-primary-700 w-full gap-2 text-sm text-white">
                 <Phone size={15} /> Contact Agent
               </Button>
-              <a
-                href={`https://wa.me/23487777777777?text=Hi, I'd like to book an inspection for ${encodeURIComponent(property.title)} in ${encodeURIComponent(property.location)}. When are you available?%0A%0AView listing: ${encodeURIComponent(`https://yoursite.com/properties/${slug}`)}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full"
-              >
-                <Button
-                  variant="outline"
-                  className="border-primary-300 text-primary-600 w-full gap-2"
-                >
-                  <MessageCircle size={15} /> Request Inspection
-                </Button>
-              </a>
+
+              <Dialog>
+                <DialogTrigger asChild>
+                  <Button
+                    variant="outline"
+                    className="border-primary-300 text-primary-600 flex w-full items-center justify-center gap-2"
+                  >
+                    <MessageCircle size={15} />
+                    Request Inspection
+                  </Button>
+                </DialogTrigger>
+                <DialogContent>
+                  <DialogHeader>
+                    <DialogDescription>
+                      <div className="mt-4 flex flex-col gap-2 p-4">
+                        <a
+                          href={`https://wa.me/23487777777777?text=Hi, I'd like to book an inspection for ${encodeURIComponent(property.title)} in ${encodeURIComponent(property.location)}. When are you available?%0A%0AView listing: ${encodeURIComponent(`https://yoursite.com/properties/${slug}`)}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="w-full"
+                        >
+                          <Button variant="outline" className="w-full">
+                            Continue on Whatsapp
+                          </Button>
+                        </a>
+                        <Button>Start Live Chat</Button>
+                      </div>
+                    </DialogDescription>
+                  </DialogHeader>
+                </DialogContent>
+              </Dialog>
 
               <div className="space-y-2">
                 <p className="text-muted-foreground mt-2 text-xs">

@@ -178,7 +178,7 @@ const HowItWorks = () => {
   const { steps, extras } = content[activeTab];
 
   return (
-    <section className="bg-primary-100 py-24">
+    <section className="bg-[#00778C]/10 py-24">
       <div className="container mx-auto max-w-6xl px-4">
         <div className="mb-10">
           <h2 className="mb-6 text-4xl font-bold text-gray-900">

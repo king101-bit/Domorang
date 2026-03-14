@@ -27,7 +27,7 @@ const PropertyFilter = ({ filters, setFilters }: Props) => {
 
   return (
     <div className="flex items-center justify-between px-4 py-4">
-      <div className="flex items-center gap-2">
+      <div className="flex items-center gap-2 px-10">
         {types.map(({ label, value }) => (
           <Button
             key={value}

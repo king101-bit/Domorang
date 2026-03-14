@@ -143,7 +143,7 @@ export default function Signup() {
             <p className="text-muted-foreground text-center text-sm">
               Already have an account?{' '}
               <a
-                href="/login"
+                href="/auth/login"
                 className="text-primary-600 font-medium hover:underline"
               >
                 Sign in
