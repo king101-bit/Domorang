@@ -1,61 +1,76 @@
-import { Field, FieldGroup, FieldLabel } from '@/components/ui/field'
-import { Input } from '@/components/ui/input'
+'use client';
+import { useActionState } from 'react';
+import { Field, FieldGroup, FieldLabel } from '@/components/ui/field';
+import { Input } from '@/components/ui/input';
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from '@/components/ui/select'
+} from '@/components/ui/select';
+import { signup } from '@/lib/actions';
 
-export default function Page() {
+export default function Signup() {
+  const [state, action, pending] = useActionState(signup, null);
+
   return (
     <div className="flex min-h-screen bg-gray-50">
       <div className="flex flex-1 items-center justify-center px-6">
-        <div className="w-full max-w-md rounded-xl bg-white p-10 shadow-lg border border-gray-100">
-          
-          {/* Header */}
+        <div className="w-full max-w-md rounded-xl border border-gray-100 bg-white p-10 shadow-lg">
           <div className="mb-8">
             <h1 className="text-3xl font-semibold tracking-tight">
               Create your account
             </h1>
-            <p className="mt-1 text-sm text-muted-foreground">
+            <p className="text-muted-foreground mt-1 text-sm">
               Find verified houses in Abuja with no hidden fees.
             </p>
           </div>
 
-          <form className="flex flex-col gap-5">
-            
-            {/* Name */}
+          {/* Global error */}
+          {state?.message && (
+            <p className="bg-destructive/10 text-destructive mb-4 rounded-md px-4 py-2 text-sm">
+              {state.message}
+            </p>
+          )}
+
+          <form className="flex flex-col gap-5" action={action}>
             <Field>
               <FieldLabel htmlFor="full-name">Full Name</FieldLabel>
-              <Input
-                id="full-name"
-                placeholder="Mike Roch"
-              />
+              <Input id="full-name" name="full_name" placeholder="Mike Rotch" />
+              {state?.errors?.full_name && (
+                <p className="text-destructive text-xs">
+                  {state.errors.full_name[0]}
+                </p>
+              )}
             </Field>
 
-            {/* Email */}
             <Field>
               <FieldLabel htmlFor="email">Email Address</FieldLabel>
               <Input
                 id="email"
+                name="email"
                 type="email"
                 placeholder="example@email.com"
               />
+              {state?.errors?.email && (
+                <p className="text-destructive text-xs">
+                  {state.errors.email[0]}
+                </p>
+              )}
             </Field>
 
-            {/* Password */}
             <FieldGroup className="grid grid-cols-2 gap-4">
               <Field>
                 <FieldLabel htmlFor="password">
                   Password <span className="text-destructive">*</span>
                 </FieldLabel>
-                <Input
-                  id="password"
-                  type="password"
-                  required
-                />
+                <Input id="password" name="password" type="password" />
+                {state?.errors?.password && (
+                  <p className="text-destructive text-xs">
+                    {state.errors.password[0]}
+                  </p>
+                )}
               </Field>
 
               <Field>
@@ -64,22 +79,28 @@ export default function Page() {
                 </FieldLabel>
                 <Input
                   id="confirm-password"
+                  name="confirm_password"
                   type="password"
                 />
+                {state?.errors?.confirm_password && (
+                  <p className="text-destructive text-xs">
+                    {state.errors.confirm_password[0]}
+                  </p>
+                )}
               </Field>
             </FieldGroup>
 
-            {/* Phone + Role */}
             <FieldGroup className="grid grid-cols-2 gap-4">
               <Field>
                 <FieldLabel htmlFor="phone">
                   Phone
-                  <span className="ml-1 text-xs text-muted-foreground">
+                  <span className="text-muted-foreground ml-1 text-xs">
                     (optional)
                   </span>
                 </FieldLabel>
                 <Input
                   id="phone"
+                  name="phone"
                   type="tel"
                   placeholder="+234 0900000000"
                 />
@@ -87,7 +108,7 @@ export default function Page() {
 
               <Field>
                 <FieldLabel htmlFor="role">I am a...</FieldLabel>
-                <Select defaultValue="renter">
+                <Select defaultValue="renter" name="role">
                   <SelectTrigger id="role">
                     <SelectValue />
                   </SelectTrigger>
@@ -97,30 +118,33 @@ export default function Page() {
                     <SelectItem value="landlord">Landlord</SelectItem>
                   </SelectContent>
                 </Select>
+                {state?.errors?.role && (
+                  <p className="text-destructive text-xs">
+                    {state.errors.role[0]}
+                  </p>
+                )}
               </Field>
             </FieldGroup>
 
-            {/* CTA */}
             <button
               type="submit"
-              className="mt-3 w-full rounded-md bg-primary-600 py-2.5 text-sm font-medium text-white transition hover:bg-primary/90"
+              disabled={pending}
+              className="bg-primary-600 hover:bg-primary/90 mt-3 w-full rounded-md py-2.5 text-sm font-medium text-white transition disabled:opacity-50"
             >
-              Create account
+              {pending ? 'Creating account...' : 'Create account'}
             </button>
 
-            {/* Divider */}
-            <div className="flex items-center gap-3 text-xs text-muted-foreground">
-              <div className="h-px flex-1 bg-border" />
+            <div className="text-muted-foreground flex items-center gap-3 text-xs">
+              <div className="bg-border h-px flex-1" />
               or
-              <div className="h-px flex-1 bg-border" />
+              <div className="bg-border h-px flex-1" />
             </div>
 
-            {/* Login link */}
-            <p className="text-center text-sm text-muted-foreground">
+            <p className="text-muted-foreground text-center text-sm">
               Already have an account?{' '}
               <a
                 href="/login"
-                className="font-medium text-primary-600 hover:underline"
+                className="text-primary-600 font-medium hover:underline"
               >
                 Sign in
               </a>
@@ -129,5 +153,5 @@ export default function Page() {
         </div>
       </div>
     </div>
-  )
+  );
 }

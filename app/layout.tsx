@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
-import { Inter, Montserrat } from 'next/font/google';
+import { DM_Sans, Inter } from 'next/font/google';
 import './globals.css';
 import { Toaster } from '@/components/ui/sonner';
 
-const montserrat = Montserrat({
-  variable: '--font-montserrat',
+const dmSans = DM_Sans({
   subsets: ['latin'],
+  variable: '--font-dm-sans',
 });
 
 const inter = Inter({
@@ -85,7 +85,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${montserrat.className} ${inter.variable} antialiased`}>
+      <body className={`${dmSans.className} ${inter.variable} antialiased`}>
         {' '}
         <main>{children}</main>
         <Toaster position="top-center" />
