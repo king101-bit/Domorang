@@ -7,6 +7,7 @@ import {
   MapPin,
   Building2,
   ChevronRight,
+  Search,
   LucideIcon,
 } from 'lucide-react';
 import { Button } from '../ui/button';
@@ -51,16 +52,16 @@ const content: Record<Tab, TabContent> = {
         icon: Users,
         title: 'Connect with agents',
         description:
-          'Work with certified local agents who know the Abuja market and can guide you through the process.',
+          'Work with verified local agents who know the Abuja market and can guide you through the process.',
         cta: 'Find an Agent',
       },
       {
         number: '03',
         icon: HeadphonesIcon,
-        title: 'Renter support',
+        title: 'Explore neighborhoods',
         description:
-          'Get help with rental questions, negotiations, and moving guidance every step of the way.',
-        cta: 'Get Support',
+          'Learn about safety, amenities, commute times, and lifestyle in different Abuja areas.',
+        cta: 'Explore areas',
       },
     ],
     extras: [
@@ -68,16 +69,16 @@ const content: Record<Tab, TabContent> = {
         icon: MapPin,
         title: 'Get Local Info',
         description:
-          'Explore neighbourhood insights across Abuja. Get important local information on the areas you care about.',
+          'Explore neighbourhoods across Abuja. Get important local information on the areas you are most interested in.',
         cta: 'Explore Areas',
         hasSearch: true,
       },
       {
         icon: Building2,
-        title: 'Are you a Landlord?',
+        title: 'Finding a Home?',
         description:
-          'List your property and reach thousands of potential tenants and agents looking for homes in Abuja.',
-        cta: 'List a Property',
+          'Connect with verified local agents who knows the Abuja market and can guide you through the process.',
+        cta: 'Find an Agent',
       },
     ],
   },
@@ -180,8 +181,9 @@ const HowItWorks = () => {
   return (
     <section className="bg-[#00778C]/10 py-24">
       <div className="container mx-auto max-w-6xl px-4">
+        {/* Header */}
         <div className="mb-10">
-          <h2 className="mb-6 text-4xl font-bold text-gray-900">
+          <h2 className="mb-6 font-sans text-4xl font-bold text-gray-900">
             Discover how it works
           </h2>
           <div className="flex gap-2">
@@ -201,33 +203,32 @@ const HowItWorks = () => {
           </div>
         </div>
 
+        {/* Step cards — top row */}
         <div className="mb-4 grid grid-cols-1 gap-4 sm:grid-cols-3">
-          {steps.map((step: Step) => {
+          {steps.map((step) => {
             const Icon = step.icon;
             return (
               <div
                 key={step.number}
                 className="flex flex-col gap-4 rounded-2xl border border-gray-100 bg-white p-6 shadow-sm transition-shadow duration-200 hover:shadow-md"
               >
-                <div className="flex items-center justify-between">
-                  <div className="bg-primary-100 text--primary-700 rounded-xl p-2">
-                    <Icon className="h-5 w-5" />
-                  </div>
-                  <span className="text-3xl font-black text-gray-200 select-none">
-                    {step.number}
-                  </span>
+                {/* Icon only — no step number */}
+                <div className="bg-primary-50 w-fit rounded-xl p-2">
+                  <Icon className="text-primary-700 h-5 w-5" />
                 </div>
-                <div>
-                  <h3 className="mb-1 font-bold text-gray-800">{step.title}</h3>
+
+                <div className="flex flex-col gap-1">
+                  <h3 className="font-sans font-bold text-gray-800">
+                    {step.title}
+                  </h3>
                   <p className="text-sm leading-relaxed text-gray-500">
                     {step.description}
                   </p>
                 </div>
-                <Button
-                  variant="outline"
-                  className="border-primary-200 text-primary-700 hover:bg-primary-300 mt-auto w-fit text-sm"
-                >
-                  {step.cta} <ChevronRight className="ml-1 h-3 w-3" />
+
+                {/* Filled dark button matching design */}
+                <Button className="bg-primary-650 hover:bg-primary-700 mt-auto w-fit text-sm text-white">
+                  {step.cta}
                 </Button>
               </div>
             );
@@ -235,37 +236,49 @@ const HowItWorks = () => {
         </div>
 
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-          {extras.map((extra: Extra) => {
+          {extras.map((extra, index) => {
             const Icon = extra.icon;
             return (
               <div
                 key={extra.title}
-                className="flex flex-col gap-3 rounded-2xl border border-gray-100 bg-white p-6 shadow-sm transition-shadow duration-200 hover:shadow-md"
+                className={`flex flex-col gap-4 rounded-2xl p-6 transition-shadow duration-200 ${
+                  index === 0
+                    ? ''
+                    : 'border border-gray-100 bg-white shadow-sm hover:shadow-md'
+                }`}
               >
-                <div className="bg-primary-100 text-primary-700 w-fit rounded-xl p-2">
-                  <Icon className="h-5 w-5" />
+                <div className="bg-primary-50 w-fit rounded-xl p-2">
+                  <Icon className="text-primary-700 h-5 w-5" />
                 </div>
-                <div>
-                  <h3 className="mb-1 font-bold text-gray-800">
+
+                <div className="flex flex-col gap-1">
+                  <h3 className="font-sans font-bold text-gray-800">
                     {extra.title}
                   </h3>
                   <p className="text-sm leading-relaxed text-gray-500">
                     {extra.description}
                   </p>
                 </div>
+
+                {/* Full-width search with button on the right */}
                 {extra.hasSearch && (
-                  <div className="focus-within:border-primary-400 flex w-full max-w-xs items-center gap-2 rounded-xl border border-gray-200 px-4 py-2 transition-colors">
-                    <MapPin className="h-4 w-4 shrink-0 text-gray-400" />
+                  <div className="focus-within:border-primary-400 flex w-full items-center rounded-xl border border-gray-200 bg-white px-3 py-2 transition-colors">
                     <input
                       type="text"
-                      placeholder="Enter an area e.g. Maitama"
+                      placeholder="Enter an area e.g Wuse, Maitama"
                       className="w-full bg-transparent text-sm text-gray-600 outline-none placeholder:text-gray-400"
                     />
+                    <button className="bg-primary-600 hover:bg-primary-700 shrink-0 rounded-lg p-1.5 transition-colors">
+                      <Search className="h-4 w-4 text-white" />
+                    </button>
                   </div>
                 )}
-                <Button className="bg-primary-600 hover:bg-primary-700 w-fit text-sm text-white">
-                  {extra.cta}
-                </Button>
+
+                {!extra.hasSearch && (
+                  <Button className="bg-primary-650 hover:bg-primary-700 mt-auto w-fit text-sm text-white">
+                    {extra.cta}
+                  </Button>
+                )}
               </div>
             );
           })}

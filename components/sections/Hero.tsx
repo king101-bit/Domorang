@@ -9,13 +9,13 @@ export default function Hero() {
       <div className="container mx-auto px-4">
         <div className="mx-auto max-w-3xl text-center">
           {/* Heading */}
-          <h1 className="mb-4 text-4xl leading-tight font-bold md:text-5xl lg:text-6xl">
+          <h1 className="font-montserrat mb-4 text-[64px] leading-tight font-bold md:text-5xl lg:text-6xl">
             Search, Find, and Secure <br />
             Your <span className="text-primary-600">Next Home</span> in Abuja.
           </h1>
 
           {/* Subtext */}
-          <p className="mb-8 text-base text-gray-600 md:text-lg">
+          <p className="mb-8 font-sans text-base text-gray-600 md:text-lg">
             Verified listings, real photos, transparent prices. No fake
             listings. No hidden fees. No inspection charges.
           </p>

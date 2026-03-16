@@ -78,10 +78,11 @@
 }
 
 @theme inline {
-  --font-sans: var(--font-sans);
-  --font-mono: ui-monospace, monospace;
-  --font-display: var(--font-display, 'Playfair Display', serif);
-  --font-serif: var(--font-serif, 'Lora', serif);
+  --font-sans: var(--font-dm-sans);
+  --font-montserrat: var(--font-montserrat-google);
+  --font-inter: var(--font-inter-google);
+  --font-satoshi: var(--font-satoshi-loaded);
+  --font-figtree: var(--font-figtree-loaded);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);

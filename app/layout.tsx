@@ -1,18 +1,43 @@
 import type { Metadata } from 'next';
-import { DM_Sans, Inter } from 'next/font/google';
+import { DM_Sans, Inter, Montserrat, Figtree } from 'next/font/google';
+import localFont from 'next/font/local';
 import './globals.css';
 import { Toaster } from '@/components/ui/sonner';
 
 const dmSans = DM_Sans({
   subsets: ['latin'],
   variable: '--font-dm-sans',
+  display: 'swap',
+});
+
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  variable: '--font-montserrat-google',
+  display: 'swap',
 });
 
 const inter = Inter({
-  variable: '--font-inter',
+  variable: '--font-inter-google',
   subsets: ['latin'],
+  display: 'swap',
 });
 
+const figTree = Figtree({
+  variable: '--font-figtree-google',
+  subsets: ['latin'],
+  display: 'swap',
+});
+
+const satoshi = localFont({
+  src: [
+    { path: '../public/fonts/Satoshi-Regular.woff2', weight: '400' },
+    { path: '../public/fonts/Satoshi-Medium.woff2', weight: '500' },
+    { path: '../public/fonts/Satoshi-Bold.woff2', weight: '700' },
+    { path: '../public/fonts/Satoshi-Black.woff2', weight: '900' },
+  ],
+  variable: '--font-satoshi',
+  display: 'swap',
+});
 export const metadata: Metadata = {
   title: 'Domorang - Verified Houses in Abuja, No Hidden Fees',
   description:
@@ -84,9 +109,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${dmSans.className} ${inter.variable} antialiased`}>
-        {' '}
+    <html
+      lang="en"
+      className={`${dmSans.variable} ${montserrat.variable} ${inter.variable} ${satoshi.variable} ${figTree.variable} scroll-smooth`}
+    >
+      <body className="antialiased">
         <main>{children}</main>
         <Toaster position="top-center" />
       </body>

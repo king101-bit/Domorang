@@ -37,10 +37,8 @@ const FAQ = () => {
   return (
     <>
       <section className="from-primary-50 relative overflow-hidden bg-gradient-to-r via-white to-white py-20">
-        {/* Decorative blur (works on mobile too) */}
         <div className="bg-primary-200/30 pointer-events-none absolute top-10 -left-32 h-72 w-72 rounded-full blur-3xl" />
 
-        {/* Illustration (desktop only) */}
         <div
           className="pointer-events-none absolute inset-y-0 left-0 hidden bg-no-repeat lg:block"
           style={{
@@ -57,7 +55,7 @@ const FAQ = () => {
             <p className="text-primary-500 mb-2 text-sm font-semibold tracking-wide uppercase">
               Got Questions?
             </p>
-            <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
+            <h2 className="font-sans text-3xl font-bold text-gray-900 sm:text-4xl">
               Frequently Asked Questions
             </h2>
           </div>
@@ -97,7 +95,7 @@ const FAQ = () => {
                     }`}
                   >
                     <div className="overflow-hidden">
-                      <p className="px-5 pb-5 text-sm leading-relaxed text-gray-500">
+                      <p className="font-figtree px-5 pb-5 text-sm leading-relaxed text-gray-500">
                         {faq.answer}
                       </p>
                     </div>
