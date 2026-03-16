@@ -1,88 +1,60 @@
+import React from 'react';
 import { ArrowRight } from 'lucide-react';
+
+const steps = [
+  {
+    number: 1,
+    title: 'Search Real Listings',
+    description:
+      'Browse only verified properties with accurate photos and prices',
+  },
+  {
+    number: 2,
+    title: 'See Complete Details',
+    description: 'No surprises. Every fee, requirement, and detail upfront',
+  },
+  {
+    number: 3,
+    title: 'Connect Directly',
+    description: 'Speak with verified agents or property owners',
+  },
+  {
+    number: 4,
+    title: 'Move In Stress-Free',
+    description: 'Secure payments, transparent process, zero headaches',
+  },
+];
 
 export default function HowItWorks() {
   return (
-    <>
-      <section className="bg-[#F7F7F7] py-20 md:py-32" id="how-it-works">
-        <div className="mx-auto max-w-7xl px-6 text-center">
-          <h1 className="mb-12 text-3xl font-bold md:text-[43px]">
-            How Domorang Works
-          </h1>
-
-          <div className="mb-12 flex flex-col items-center justify-center gap-6 md:flex-row md:gap-0">
-            {/* Step 1 */}
-            <div className="w-full rounded-2xl border-2 border-[#0891B2] bg-white p-6 text-left md:w-64">
-              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-[#0891B2] text-lg font-semibold text-white">
-                1
+    <section className="bg-gray-50 py-20 md:py-32" id="how-it-works">
+      <div className="mx-auto max-w-7xl px-6 text-center">
+        <h2 className="mb-12 text-3xl font-bold md:text-[43px]">
+          How Domorang Works
+        </h2>
+        <div className="mb-12 flex flex-col items-center justify-center gap-6 md:flex-row md:gap-0">
+          {steps.map((step, index) => (
+            <React.Fragment key={step.number}>
+              <div className="border-primary-600 w-full rounded-2xl border-2 bg-white p-6 text-left md:w-64">
+                <div className="bg-primary-600 mb-4 flex h-12 w-12 items-center justify-center rounded-full text-lg font-semibold text-white">
+                  {step.number}
+                </div>
+                <h3 className="mb-2 text-lg font-semibold">{step.title}</h3>
+                <p className="text-sm text-gray-600">{step.description}</p>
               </div>
-              <h3 className="mb-2 text-lg font-semibold">
-                Search Real Listings
-              </h3>
-              <p className="text-sm text-gray-600">
-                Browse only verified properties with accurate photos and prices
-              </p>
-            </div>
-
-            {/* Arrow 1 */}
-            <div className="hidden px-4 text-[#0891B2] md:flex">
-              <ArrowRight className="h-8 w-8" />
-            </div>
-
-            {/* Step 2 */}
-            <div className="w-full rounded-2xl border-2 border-[#0891B2] bg-white p-6 text-left md:w-64">
-              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-[#0891B2] text-lg font-semibold text-white">
-                2
-              </div>
-              <h3 className="mb-2 text-lg font-semibold">
-                See Complete Details
-              </h3>
-              <p className="text-sm text-gray-600">
-                No surprises. Every fee, requirement, and detail upfront
-              </p>
-            </div>
-
-            {/* Arrow 2 */}
-            <div className="hidden px-4 text-[#0891B2] md:flex">
-              <ArrowRight className="h-8 w-8" />
-            </div>
-
-            {/* Step 3 */}
-            <div className="w-full rounded-2xl border-2 border-[#0891B2] bg-white p-6 text-left md:w-64">
-              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-[#0891B2] text-lg font-semibold text-white">
-                3
-              </div>
-              <h3 className="mb-2 text-lg font-semibold">Connect Directly</h3>
-              <p className="text-sm text-gray-600">
-                Speak with verified agents or property owners
-              </p>
-            </div>
-
-            {/* Arrow 3 */}
-            <div className="hidden px-4 text-[#0891B2] md:flex">
-              <ArrowRight className="h-8 w-8" />
-            </div>
-
-            {/* Step 4 */}
-            <div className="w-full rounded-2xl border-2 border-[#0891B2] bg-white p-6 text-left md:w-64">
-              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-[#0891B2] text-lg font-semibold text-white">
-                4
-              </div>
-              <h3 className="mb-2 text-lg font-semibold">
-                Move In Stress-Free
-              </h3>
-              <p className="text-sm text-gray-600">
-                Secure payments, transparent process, zero headaches
-              </p>
-            </div>
-          </div>
-
-          {/* CTA Button */}
-          <span className="text-base">
-            Join <span className="text-primary-600 font-semibold">100+</span>{' '}
-            people already waiting
-          </span>
+              {index < steps.length - 1 && (
+                <div className="text-primary-600 hidden px-4 md:flex">
+                  <ArrowRight className="h-8 w-8" />
+                </div>
+              )}
+            </React.Fragment>
+          ))}
         </div>
-      </section>
-    </>
+        <span className="text-base">
+          Join <span className="text-primary-600 font-semibold">100+</span>{' '}
+          people already waiting
+        </span>
+      </div>
+    </section>
   );
 }

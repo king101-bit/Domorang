@@ -4,15 +4,16 @@ import './globals.css';
 import { Toaster } from '@/components/ui/sonner';
 
 const inter = Inter({
-  variable: '--font-inter',
+  variable: '--font-inter-google',
   subsets: ['latin'],
+  display: 'swap',
 });
 
 const montserrat = Montserrat({
-  variable: '--font-montserrat',
+  variable: '--font-montserrat-google',
   subsets: ['latin'],
+  display: 'swap',
 });
-
 export const metadata: Metadata = {
   title: 'Domorang - Verified Houses in Abuja, No Hidden Fees',
   description:
@@ -84,8 +85,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${inter.variable} ${montserrat.variable} antialiased`}>
+    <html lang="en" className={`${inter.variable} ${montserrat.variable}`}>
+      <body className="antialiased">
         <main>{children}</main>
         <Toaster position="top-center" />
       </body>

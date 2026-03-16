@@ -1,24 +1,24 @@
 'use client';
+import { useState } from 'react';
 import Link from 'next/link';
 import { Button } from '../ui/button';
 import { Book, HelpCircle, Menu, Star, Workflow, X } from 'lucide-react';
-import { useState } from 'react';
+
+const navItems = [
+  { link: '#how-it-works', label: 'How it works', icon: Workflow },
+  { link: '#why-us', label: 'Why Us', icon: Star },
+  { link: '#faqs', label: 'FAQs', icon: HelpCircle },
+  { link: '#our-story', label: 'Our Story', icon: Book },
+];
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const navItems = [
-    { link: '#how-it-works', label: 'How it works', icon: Workflow },
-    { link: '#why-us', label: 'Why Us', icon: Star },
-    { link: '#faqs', label: 'FAQs', icon: HelpCircle },
-    { link: '#our-story', label: 'Our Story', icon: Book },
-  ];
 
   return (
     <header className="bg-card border-border sticky top-0 z-50 border-b">
       <div className="container mx-auto px-4">
         <div className="flex h-14 items-center justify-between">
-          <Link href={`/`} className="flex items-center gap-2">
+          <Link href="/" className="flex items-center gap-2">
             <span className="text-sm font-semibold">Domorang</span>
           </Link>
 
@@ -34,19 +34,22 @@ const Navbar = () => {
               </Link>
             ))}
           </nav>
+
           <Link href="#waitlist" className="hidden md:block">
             <Button
               size="sm"
-              className="bg-primary-600 hover:bg-secondary/90 text-secondary-foreground rounded-full px-6"
+              className="bg-primary-600 hover:bg-primary-700 rounded-full px-6 text-white"
             >
               Join the Waitlist
             </Button>
           </Link>
+
           {/* Mobile menu toggle */}
           <button
             className="p-2 md:hidden"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
+            aria-expanded={isMenuOpen}
           >
             {isMenuOpen ? (
               <X className="h-5 w-5" />
@@ -58,7 +61,10 @@ const Navbar = () => {
 
         {/* Mobile nav */}
         {isMenuOpen && (
-          <nav className="border-border border-t py-4 md:hidden">
+          <nav
+            className="border-border border-t py-4 md:hidden"
+            aria-label="Mobile navigation"
+          >
             <div className="flex flex-col gap-3">
               {navItems.map((item) => {
                 const Icon = item.icon;
@@ -69,16 +75,15 @@ const Navbar = () => {
                     className="hover:bg-muted flex items-center gap-3 rounded-md px-2 py-2 text-sm font-semibold"
                     onClick={() => setIsMenuOpen(false)}
                   >
-                    {Icon && <Icon className="h-4 w-4" />}
+                    <Icon className="h-4 w-4" />
                     {item.label}
                   </Link>
                 );
               })}
-
-              <Link href="#waitlist">
+              <Link href="#waitlist" onClick={() => setIsMenuOpen(false)}>
                 <Button
                   size="sm"
-                  className="bg-primary-600 hover:bg-secondary/90 text-secondary-foreground rounded-full px-6"
+                  className="bg-primary-600 hover:bg-primary-700 rounded-full px-6 text-white"
                 >
                   Join the Waitlist
                 </Button>
